@@ -20,5 +20,47 @@ export default {
 </script>
 
 <style scoped>
+.topAbout-section {
+    padding: 5% 7%;
+}
 
+@media screen and (max-width: 756px) {
+    .topAbout-section .title-col {
+        text-align: center;
+    }
+}
+
+.topAbout-section .title-col h2 {
+    font-size: 64px;
+    font-weight: 400;
+    color: white;
+}
+
+@media screen and (max-width: 756px) {
+    .topAbout-section .text-col {
+        text-align: center;
+    }
+}
+
+.topAbout-section .text-col hr {
+    width: 30px;
+    height: 5px;
+    margin-left: 0;
+    background-color: #f67e7e;
+    color: #f67e7e;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 1080px) {
+    .topAbout-section .text-col hr {
+        margin-top: 2%;
+        margin-bottom: 9%;
+    }
+}
+
+.topAbout-section .text-col p {
+    font-size: 18px;
+    color: white;
+    padding-right: 11%;
+}
 </style>
