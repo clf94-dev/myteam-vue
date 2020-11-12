@@ -15,6 +15,22 @@ Vue.config.productionTip = false
 Vue.use(VueRouter);
 Vue.use(Vuelidate);
 
+
+import Home from './components/pages/Home.vue'
+import About from './components/pages/About.vue'
+import Contact from './components/pages/Contact.vue'
+
+const routes=[
+  {path:'/', component: Home},
+  {path:'/home', component: Home},
+  {path:'/about' ,component: About},
+  {path:'/contact', component: Contact}
+];
+
+const router=new VueRouter({
+  routes, mode:'history'
+});
+
 new Vue({
-  render: h => h(App),
+  router,render: h => h(App),
 }).$mount('#app')
