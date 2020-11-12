@@ -2,7 +2,7 @@
 <nav class='navbar'>
     <div class="navbar-cont">
         <div class='navbar-logo'>
-            <img :src="logo" alt="myteam" />
+            <img @click="goToHome()" :src="logo" alt="myteam" />
         </div>
         <div class="menu-icon">
             <i class='fas fa-bars'></i>
@@ -15,7 +15,7 @@
             <li class="nav-item">
                 <router-link class="nav-links" to='/about'> About</router-link>
             </li>
-            <button class='transparent-btn'> Contact Us</button>
+            <button class='transparent-btn' @click="goToContact()"> Contact Us</button>
         </ul>
 
     </div>
@@ -28,6 +28,14 @@ export default {
     data() {
         return {
             logo: require('@/assets/images/logo.svg')
+        }
+    },
+    methods: {
+        goToHome() {
+            this.$router.push('/home');
+        },
+        goToContact() {
+            this.$router.push('/contact');
         }
     }
 }
@@ -105,7 +113,7 @@ export default {
     grid-gap: 35px;
     list-style: none;
     text-align: center;
-    justify-content: start=;
+    justify-content: start;
     margin-left: 50px;
     align-items: center !important;
     margin-top: 15px;
