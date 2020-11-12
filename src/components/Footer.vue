@@ -5,10 +5,10 @@
             <img :src="logo" alt="myteam">
             <b-row class="links-row">
                 <b-col class="link-col" xs="6" sm="6" md="6" lg="6">
-                    <a class="links home"> Home</a>
+                    <router-link class="links home" to='/home'> Home</router-link>
                 </b-col>
                 <b-col class="link-col" xs="6" sm="6" md="6" lg="6">
-                    <a class="links about"> About</a>
+                    <router-link class="links about" to='/about'> About</router-link>
                 </b-col>
 
             </b-row>
@@ -71,30 +71,31 @@ export default {
     margin-bottom: 15px;
 }
 
-.footer-section .logo-col .limks-row .link-col {
+.footer-section .logo-col .links-row .link-col {
     margin-bottom: 20px;
 }
 
-.footer-section .logo-col .limks-row .link-col .links {
+.footer-section .logo-col .links-row .link-col .links {
     text-align: center;
     cursor: pointer !important;
+    text-decoration: none !important;
     color: white !important;
 }
 
-.footer-section .logo-col .limks-row .link-col .links:hover {
+.footer-section .logo-col .links-row .link-col .links:hover {
     transition: all 0.3s ease;
     color: #f67e7e !important;
 }
 
 @media screen and (max-width: 756px) {
-    .footer-section .logo-col .limks-row .link-col .links.home {
+    .footer-section .logo-col .links-row .link-col .links.home {
         position: relative;
         left: 45px;
     }
 }
 
 @media screen and (max-width: 756px) {
-    .footer-section .logo-col .limks-row .link-col .links.about {
+    .footer-section .logo-col .links-row .link-col .links.about {
         position: relative;
         left: -45px;
     }
