@@ -105,9 +105,10 @@ export default {
     grid-gap: 35px;
     list-style: none;
     text-align: center;
-    justify-content: start;
+    justify-content: start=;
     margin-left: 50px;
-    align-items: center;
+    align-items: center !important;
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 756px) {
