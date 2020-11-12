@@ -11,14 +11,16 @@ import VueRouter from 'vue-router'
 
 import Vuelidate from 'vuelidate';
 
+
+import Home from './components/pages/Home.vue'
+import About from './components/pages/About.vue'
+import Contact from './components/pages/Contact.vue' 
+
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 Vue.use(Vuelidate);
 
 
-import Home from './components/pages/Home.vue'
-import About from './components/pages/About.vue'
-import Contact from './components/pages/Contact.vue'
 
 const routes=[
   {path:'/', component: Home},
