@@ -26,7 +26,7 @@ export default {
 
 @media screen and (max-width: 756px) {
     .topAbout-section .title-col {
-        text-align: center;
+        text-align: start;
     }
 }
 
@@ -38,7 +38,7 @@ export default {
 
 @media screen and (max-width: 756px) {
     .topAbout-section .text-col {
-        text-align: center;
+        text-align: start;
     }
 }
 
