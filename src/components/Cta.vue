@@ -72,12 +72,19 @@ export default {
     color: #014d56;
 }
 
-@media screen and (min-width: 756px) {
+@media screen and (min-width: 800px) {
     .cta-section .btn-col .transparent-btn {
-        margin: 15px 40%;
-        width: 250px;
+        margin: 15px 25%;
+        width: 250px !important;
         height: 40px;
         border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .cta-section .btn-col .transparent-btn {
+        margin: 15px 40%;
+
     }
 }
 
