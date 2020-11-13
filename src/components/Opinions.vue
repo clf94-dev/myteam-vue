@@ -7,7 +7,7 @@
         </h2>
     </div>
     <b-row class="opinions-row">
-        <b-col class="opinions-col" xs="12" sm="12" md="4" lg="4" v-for="data of opinions" v-bind:key="data.name">
+        <b-col class="opinion-col" xs="12" sm="12" md="4" lg="4" v-for="data of opinions" v-bind:key="data.name">
             <img class='quotes' :src="quotes" alt="quotes" />
             <p>
                 {{data.text}}
@@ -58,5 +58,77 @@ export default {
 </script>
 
 <style scoped>
+.opinions-section {
+    padding: 30% 7%;
+}
 
+@media screen and (min-width: 756px) {
+    .opinions-section {
+        padding: 10% 7%;
+    }
+}
+
+.opinions-section .title {
+    text-align: center;
+}
+
+@media screen and (min-width: 756px) {
+    .opinions-section .title {
+        text-align: center;
+    }
+}
+
+.opinions-section .title h2 {
+    font-size: 30px;
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 756px) {
+    .opinions-section .title h2 {
+        margin-bottom: 30px;
+    }
+}
+
+.opinions-section .title h2.color {
+    color: #79c8c7;
+}
+
+.opinions-section .opinions-row .opinion-col {
+
+    text-align: center;
+}
+
+.opinions-section .opinions-row .opinion-col .quotes {
+    position: relative;
+    top: 40px;
+    z-index: -1;
+}
+
+.opinions-section .opinions-row .opinion-col p {
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    padding: 0 7% 20px;
+}
+
+.opinions-section .opinions-row .opinion-col p.position {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.opinions-section .opinions-row .opinion-col h3 {
+    font-size: 18px;
+    color: #79c8c7;
+    font-weight: 400;
+}
+
+.opinions-section .opinions-row .opinion-col .avatar {
+    width: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
 </style>
