@@ -66,5 +66,22 @@ export default {
 </script>
 
 <style scoped>
+.meet-section {
+    padding: 5% 7%;
+}
 
+.meet-section h3 {
+    text-align: center;
+    font-size: 30px;
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 480px) {
+    .meet-section .meet-row {
+        padding-left: 2%;
+    }
+}
 </style>
