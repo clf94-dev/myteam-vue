@@ -3,7 +3,7 @@
     <h3>Meet the directors</h3>
     <b-row class="meet-row">
         <b-col class="card-col" xs="12" sm="6" md="4" lg="4" v-for="data of meet" v-bind:key="data.name">
-            <MeetCard :name="data.name" :position="data.position" :description="data.description" :src="data.src" :imgalt="data.imgAlt"></MeetCard>
+            <MeetCard :info="data"></MeetCard>
         </b-col>
     </b-row>
 </b-container>
@@ -13,9 +13,9 @@
 import MeetCard from './MeetCard.vue'
 export default {
     name: 'Meet',
-    components: [
+    components: {
         MeetCard
-    ],
+    },
     data() {
         return {
             meet: [{
@@ -83,5 +83,10 @@ export default {
     .meet-section .meet-row {
         padding-left: 2%;
     }
+}
+
+.card-col {
+
+    text-align: center;
 }
 </style>

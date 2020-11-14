@@ -1,21 +1,21 @@
 <template>
 <div>
     <div :class="card1Classes">
-        <img class='avatar' :src="src" :alt="ImgAlt" />
+        <img class='avatar' :src="info.src" :alt="info.imgAlt" />
 
-        <p class='name'>{{name}}
+        <p class='name'>{{info.name}}
         </p>
 
-        <p class='position'>{{position}}
+        <p class='position'>{{info.position}}
         </p>
     </div>
     <div :class="card2Classes">
-        <p class='name'>{{name}}
+        <p class='name'>{{info.name}}
         </p>
-        <p class='description'>{{description}}</p>
+        <p class='description'>{{info.description}}</p>
         <div class="social-row" fxLayout='row wrap'>
-            <i class='fab fa-2x fa-twitter'></i>
-            <i class='fab fa-2x fa-linkedin'></i>
+            <i class='fab fa-2x fa-twitter icon'></i>
+            <i class='fab fa-2x fa-linkedin icon'></i>
         </div>
 
     </div>
@@ -30,7 +30,7 @@
 export default {
     name: 'MeetCard',
     props: [
-        'name', 'position', 'description', 'imgalt', 'src'
+        'info'
     ],
     data() {
         return {
@@ -51,14 +51,14 @@ export default {
                 this.imgSrc = this.Plus;
                 this.imgAlt = "More";
                 this.classes = "btn coral";
-                this.card1Classes = "show";
-                this.card2Classes = "hide";
+                this.card1Classes = " info-card1 show";
+                this.card2Classes = "info-card2 hide";
             } else {
                 this.imgSrc = this.Cross;
                 this.imgAlt = "Close";
                 this.classes = " btn light-blue";
-                this.card1Classes = "hide";
-                this.card2Classes = "show";
+                this.card1Classes = "info-card1 hide";
+                this.card2Classes = "info-card2 show";
             }
         }
     }
@@ -66,12 +66,6 @@ export default {
 </script>
 
 <style scoped>
-.card-col {
-    margin: 0 40px;
-
-    text-align: center;
-}
-
 .card-col .info-card1 {
     padding-top: 25px;
     margin: 0 auto;
@@ -147,16 +141,16 @@ export default {
     justify-content: center;
 }
 
-.card-col .info-card2 .social-row i {
+.card-col .info-card2 .social-row .icon {
     color: white;
     margin-right: 10px;
     margin-left: 10px;
 }
 
-.card-col .info-card2 .social-row i:hover {
+.card-col .info-card2 .social-row .icon:hover {
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #f67e7e;
+    color: #f67e7e !important;
 }
 
 .card-col button {
