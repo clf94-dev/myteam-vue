@@ -17,6 +17,17 @@ export default {
 </script>
 
 <style scoped>
+.form-col {
+
+    padding-top: 3%;
+}
+
+@media screen and (min-width: 1081px) {
+    .form-col {
+        padding: 2% 5%;
+    }
+}
+
 input {
     width: 100%;
     outline: none;

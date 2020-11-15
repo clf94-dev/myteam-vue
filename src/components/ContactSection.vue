@@ -124,15 +124,4 @@ export default {
         padding: 0 5%;
     }
 }
-
-.contact-section .form-col {
-
-    padding-top: 3%;
-}
-
-@media screen and (min-width: 1081px) {
-    .contact-section .form-col {
-        padding: 2% 5%;
-    }
-}
 </style>
