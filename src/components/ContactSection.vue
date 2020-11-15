@@ -54,5 +54,85 @@ export default {
 </script>
 
 <style scoped>
+.contact-section {
+    padding: 5% 9%;
+}
 
+.contact-section .askabout-col h2 {
+    font-size: 64px;
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+@media screen and (max-width: 1080px) {
+    .contact-section .askabout-col h2 {
+        text-align: center;
+    }
+}
+
+.contact-section .askabout-col h3 {
+    font-size: 30px;
+    font-family: "Livvic", sans-serif;
+    font-weight: 400;
+    color: #f67e7e;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+    .contact-section .askabout-col h3 {
+        text-align: center;
+    }
+}
+
+.contact-section .askabout-col .feat-elem {
+    padding: 1%;
+}
+
+@media screen and (max-width: 755px) {
+    .contact-section .askabout-col .feat-elem {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+}
+
+.contact-section .askabout-col .feat-elem .img-col {
+    text-align: center;
+}
+
+.contact-section .askabout-col .feat-elem .img-col img {
+    width: 60px !important;
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 755px) {
+    .contact-section .askabout-col .feat-elem .img-col {
+        margin-bottom: 20px;
+    }
+}
+
+.contact-section .askabout-col .feat-elem .text-col p {
+    font-size: 15px;
+    font-family: "Livvic", sans-serif;
+    color: white;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 755px) {
+    .contact-section .askabout-col .feat-elem .text-col p {
+        padding: 0 5%;
+    }
+}
+
+.contact-section .form-col {
+
+    padding-top: 3%;
+}
+
+@media screen and (min-width: 1081px) {
+    .contact-section .form-col {
+        padding: 2% 5%;
+    }
+}
 </style>
