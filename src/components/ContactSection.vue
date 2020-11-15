@@ -15,7 +15,7 @@
             </b-row>
 
         </b-col>
-        <b-col class="form-col" xs="12" sm="6" md="6" lg="6">
+        <b-col xs="12" sm="6" md="6" lg="6">
             <Form></Form>
         </b-col>
 
