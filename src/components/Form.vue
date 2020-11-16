@@ -1,26 +1,26 @@
 <template>
 <div class="form" @submit.prevent="showData()">
     <form class="form-col">
-        <input :style="[submitted && (!$v.user.name.required || !$v.user.name.alpha || !$v.user.name.minLength ) ? {color: '#f67e7e', borderBottomColor: '#f67e7e'} : {color: 'white', borderBottomColor: '#2c6168'} ]" type="text" name='name' placeholder="Name" v-model="user.name">
+        <input data-aos='fade-left' data-aos-delay='300' :style="[submitted && (!$v.user.name.required || !$v.user.name.alpha || !$v.user.name.minLength ) ? {color: '#f67e7e', borderBottomColor: '#f67e7e'} : {color: 'white', borderBottomColor: '#2c6168'} ]" type="text" name='name' placeholder="Name" v-model="user.name">
         <div :style="{color: ' #f67e7e'}" v-if="submitted && !$v.user.name.required">
             The name is required</div>
         <div :style="{color: ' #f67e7e'}" v-if="submitted && !$v.user.name.alpha">
             The name must contain alphabetic characters</div>
         <div :style="{color: ' #f67e7e'}" v-if="submitted && !$v.user.name.minLength">
             The name must contain at least 2 characters</div>
-        <input :style="[submitted && (!$v.user.email.required || !$v.user.email.email ) ? {color: '#f67e7e', borderBottomColor: '#f67e7e'} : {color: 'white', borderBottomColor: '#2c6168'} ]" type="text" name='email' placeholder="Email" v-model="user.email">
+        <input data-aos='fade-left' data-aos-delay='500' :style="[submitted && (!$v.user.email.required || !$v.user.email.email ) ? {color: '#f67e7e', borderBottomColor: '#f67e7e'} : {color: 'white', borderBottomColor: '#2c6168'} ]" type="text" name='email' placeholder="Email" v-model="user.email">
         <div :style="{color: ' #f67e7e'}" v-if="submitted && !$v.user.email.required">
             An Email Address is required</div>
         <div :style="{color: ' #f67e7e'}" v-if="submitted && !$v.user.email.email">
             Invalid Email Address </div>
-        <input type="text" name='company' placeholder="Company" v-model="user.company">
-        <input type="text" name='title' placeholder="Title" v-model="user.title">
-        <textarea placeholder="Your message..." :style="[submitted && (!$v.user.message.required || !$v.user.message.minLength ) ? {color: '#f67e7e', borderBottomColor: '#f67e7e'} : {color: 'white', borderBottomColor: '#2c6168'} ]" v-model="user.message" name="message" id="" cols="30" rows="10"></textarea>
+        <input data-aos='fade-left' data-aos-delay='700' type="text" name='company' placeholder="Company" v-model="user.company">
+        <input data-aos='fade-left' data-aos-delay='900' type="text" name='title' placeholder="Title" v-model="user.title">
+        <textarea data-aos='fade-left' data-aos-delay='1100' placeholder="Your message..." :style="[submitted && (!$v.user.message.required || !$v.user.message.minLength ) ? {color: '#f67e7e', borderBottomColor: '#f67e7e'} : {color: 'white', borderBottomColor: '#2c6168'} ]" v-model="user.message" name="message" id="" cols="30" rows="10"></textarea>
         <div :style="{color: ' #f67e7e'}" v-if="submitted && !$v.user.message.required">
             A Message is required</div>
         <div :style="{color: ' #f67e7e'}" v-if="submitted && !$v.user.message.minLength">
             The message must contain at least 5 characters</div>
-        <button type="submit" class="submit-btn"> Submit </button>
+        <button data-aos='fade-left' data-aos-delay='1300' type="submit" class="submit-btn"> Submit </button>
     </form>
 </div>
 </template>
