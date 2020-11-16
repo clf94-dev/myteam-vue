@@ -1,5 +1,5 @@
 <template>
-<b-container fluid class="cta-section">
+<b-container fluid class="cta-section" data-aos='flip-left'>
     <b-row>
         <b-col class="title-col" xs="12" sm="12" md="6" lg="6">
             <h2>Ready to get started?</h2>
