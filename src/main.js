@@ -16,6 +16,9 @@ import Home from './components/pages/Home.vue'
 import About from './components/pages/About.vue'
 import Contact from './components/pages/Contact.vue' 
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 Vue.use(Vuelidate);
@@ -35,4 +38,7 @@ const router=new VueRouter({
 
 new Vue({
   router,render: h => h(App),
+  created() {
+    AOS.init();
+  }
 }).$mount('#app')
