@@ -1,9 +1,9 @@
 <template>
 <b-container fluid class="clients-section">
-    <h3>Some of our clients</h3>
+    <h3 data-aos='fade-right' data-aos-delay='200'>Some of our clients</h3>
     <b-row class="clients-row">
         <b-col class="logo" xs="12" sm="6" md="2" v-for="data of clients" v-bind:key="data.imgAlt">
-            <img :src="data.src" :alt="data.imgAlt">
+            <img :src="data.src" :alt="data.imgAlt" data-aos='fade-left' :data-aos-delay="data.delay">
         </b-col>
 
     </b-row>
@@ -18,23 +18,28 @@ export default {
         return {
             clients: [{
                     src: require('@/assets/images/logo-gadgets-now.png'),
-                    imgAlt: "Gadgets Now"
+                    imgAlt: "Gadgets Now",
+                    delay: 300
                 },
                 {
                     src: require('@/assets/images/logo-jakarta-post.png'),
-                    imgAlt: "Jakarta Post"
+                    imgAlt: "Jakarta Post",
+                    delay: 500
                 },
                 {
                     src: require('@/assets/images/logo-tech-radar.png'),
-                    imgAlt: "Tech Radar"
+                    imgAlt: "Tech Radar",
+                    delay: 700
                 },
                 {
                     src: require('@/assets/images/logo-the-guardian.png'),
-                    imgAlt: "The Guardian"
+                    imgAlt: "The Guardian",
+                    delay: 900
                 },
                 {
                     src: require('@/assets/images/logo-the-verge.png'),
-                    imgAlt: "The Verge"
+                    imgAlt: "The Verge",
+                    delay: 1100
                 }
             ]
         }
