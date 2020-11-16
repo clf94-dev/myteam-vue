@@ -2,9 +2,9 @@
 <b-container fluid class="contact-section">
     <b-row>
         <b-col class="askabout-col" xs="12" sm="6" md="6" lg="6">
-            <h2>Contact</h2>
-            <h3>Ask us about</h3>
-            <b-row class="feat-elem" v-for="data of features" v-bind:key="data.text">
+            <h2 data-aos='fade-right' data-aos-delay='100'>Contact</h2>
+            <h3 data-aos='fade-right' data-aos-delay='200'>Ask us about</h3>
+            <b-row class="feat-elem" v-for="data of features" v-bind:key="data.text" data-aos='fade-up' :data-aos-delay="data.delay">
                 <b-col class="img-col" xs="2" sm="2" md="2" lg="2">
                     <img :src="data.src" :alt="data.imgAlt">
                 </b-col>
@@ -35,16 +35,19 @@ export default {
             features: [{
                     src: require('@/assets/images/icon-person.svg'),
                     imgAlt: 'Experienced Individuals',
-                    text: 'The quality of our talent network'
+                    text: 'The quality of our talent network',
+                    delay: 200
                 },
                 {
                     src: require('@/assets/images/icon-cog.svg'),
                     imgAlt: 'Easy to Implement',
-                    text: 'Usage & implementation of our software'
+                    text: 'Usage & implementation of our software',
+                    delay: 400
                 }, {
                     src: require('@/assets/images/icon-chart.svg'),
                     imgAlt: 'Enhanced Productivity',
-                    text: 'How we help drive innovation'
+                    text: 'How we help drive innovation',
+                    delay: 600
                 }
 
             ]
