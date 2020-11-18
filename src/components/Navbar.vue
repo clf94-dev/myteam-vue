@@ -142,6 +142,15 @@ export default {
   margin-top: 15px;
 }
 
+.navbar .nav-menu .nav-links .nav-btn {
+  font-size: 16px !important;
+  color: white;
+  position: relative;
+  top: 3px;
+}
+.navbar .nav-menu .nav-links .nav-btn:hover {
+  color: #f67e7e;
+}
 @media screen and (max-width: 756px) {
   .navbar .nav-menu {
     display: flex;
