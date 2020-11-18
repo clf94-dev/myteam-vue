@@ -12,12 +12,12 @@
       </div>
       <ul :class="click ? 'nav-menu active' : 'nav-menu'">
         <li class="nav-item">
-          <router-link class="nav-links" to="/home">
+          <router-link :active-link="active" class="nav-links" to="/home">
             <button class="nav-btn" @click="closeMobile()">Home</button>
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-links" to="/about"
+          <router-link :active-link="active" class="nav-links" to="/about"
             ><button class="nav-btn" @click="closeMobile()">
               About
             </button></router-link
@@ -118,7 +118,7 @@ export default {
     display: block;
     position: absolute;
     top: 40px;
-    right: 40px;
+    right: 0px;
     font-size: 1.8rem;
     z-index: 2;
     cursor: pointer;
@@ -148,6 +148,9 @@ export default {
   position: relative;
   top: 3px;
 }
+.navbar .navbar-cont .nav-menu .nav-links.router-link-active .nav-btn {
+  color: #79c8c7 !important;
+}
 .navbar .nav-menu .nav-links .nav-btn:hover {
   color: #f67e7e;
 }
@@ -162,6 +165,10 @@ export default {
     left: 100%;
     opacity: 0;
     transition: all 0.5s ease;
+  }
+
+  .navbar .navbar-cont .nav-menu.active .nav-links.router-link-active .nav-btn {
+    color: #79c8c7 !important;
   }
 
   .navbar .nav-menu.active {
